@@ -116,7 +116,7 @@
 
                                     <div class="social-login center">
                                         <a class="btn btn-primary">
-                                            <i class="ace-icon fa fa-facebook"></i>
+                                            <i class="ace-icon fa"><img width="22px" src="{{URL::asset('assets/css/img/qq.png')}}" ></i>
                                         </a>
 
                                         <a class="btn btn-info">
