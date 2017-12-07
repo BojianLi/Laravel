@@ -20,6 +20,8 @@ Route::get('/',function(){
      return view('login');
 });
 
+Route::get('list',function(){ return "hellow world";  });
+
 Route::get('test',function(){ return view('test');   }); //调试layout模板
 
 /**
