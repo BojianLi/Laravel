@@ -4,6 +4,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8" />
     <title>小宝菜</title>
+    {{--手机验证信息--}}
+    <link rel="stylesheet" href="{{URL::asset('tel/css/phone.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('tel/css/weui.min.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('tel/css/jquery-weui.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{URL::asset('tel/css/demos.css')}}">
+    {{--end手机验证--}}
+
 
     <meta name="description" content="User login page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -74,18 +81,18 @@
 
                                     <div class="space-6"></div>
 
-                                    <form>
+                                    <form action="{{Route('LoginTo')}}" method="post" >
                                         <fieldset>
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="Username" />
+															<input name="user_name" type="text" class="form-control" placeholder="Username" />
 															<i class="ace-icon fa fa-user"></i>
 														</span>
                                             </label>
 
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="Password" />
+															<input name="user_pwd" type="password" class="form-control" placeholder="Password" />
 															<i class="ace-icon fa fa-lock"></i>
 														</span>
                                             </label>
@@ -94,11 +101,11 @@
 
                                             <div class="clearfix">
                                                 <label class="inline">
-                                                    <input type="checkbox" class="ace" />
+                                                    <input name="ace" type="checkbox" class="ace" />
                                                     <span class="lbl"> 记住</span>
                                                 </label>
 
-                                                <button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+                                                <button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
                                                     <i class="ace-icon fa fa-key"></i>
                                                     <span class="bigger-110">登录</span>
                                                 </button>
@@ -164,15 +171,23 @@
                                         <fieldset>
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="Email" />
-															<i class="ace-icon fa fa-envelope"></i>
+															<input type="email" class="form-control" placeholder="手机号" />
+															<i class="ace-icon fa ">T</i>
 														</span>
                                             </label>
+                                            <div >
+                                                <label class="block clearfix" style="width: 160px;display: block;float: left" >
+														<span class="block input-icon input-icon-right">
+															<input style="width: 160px" type="email" class="form-control" placeholder="输入验证码" />
+															<i class="ace-icon fa fa-lock"></i>
+														</span>
+                                                </label>
+                                                &nbsp;  <input style=" margin-top:3px;width:115px;display: block;float: right;background: darkred" type="button" class="weui_btn weui_btn weui_btn_mini weui_btn_primary" value="获取验证码"   onclick="clickButton(this)"/>
 
-                                            <div class="clearfix">
+                                            <div class="clearfix" style="margin-top: 30px">
                                                 <button type="button" class="width-35 pull-right btn btn-sm btn-danger">
-                                                    <i class="ace-icon fa fa-lightbulb-o"></i>
-                                                    <span class="bigger-110">发送邮件</span>
+                                                    <i class="ace-icon fa">Tel</i>
+                                                    <span class="bigger-110">确认</span>
                                                 </button>
                                             </div>
                                         </fieldset>
@@ -201,24 +216,43 @@
 
                                     <form>
                                         <fieldset>
-                                            <label class="block clearfix">
-														<span class="block input-icon input-icon-right">
-															<input type="email" class="form-control" placeholder="邮箱" />
-															<i class="ace-icon fa fa-envelope"></i>
-														</span>
-                                            </label>
+
 
                                             <label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="text" class="form-control" placeholder="用户名" />
-															<i class="ace-icon fa fa-user"></i>
+															<input type="text" class="form-control" placeholder="请输入手机号" />
+															<i class="ace-icon fa fa-tel">Tel</i>
 														</span>
                                             </label>
-
-                                            <label class="block clearfix">
+                                            {{--手机验证码--}}
+                                            <div >
+                                            <label class="block clearfix" style="width: 160px;display: block;float: left" >
 														<span class="block input-icon input-icon-right">
-															<input type="password" class="form-control" placeholder="密码" />
+															<input style="width: 160px" type="email" class="form-control" placeholder="输入验证码" />
 															<i class="ace-icon fa fa-lock"></i>
+														</span>
+                                            </label>
+                                              &nbsp;  <input style=" margin-top:3px;width:115px;display: block;float: right" type="button" class="weui_btn weui_btn weui_btn_mini weui_btn_primary" value="获取验证码"   onclick="clickButton(this)"/>
+                                                <script type="text/javascript">
+                                                    function clickButton(obj){
+                                                        var obj = $(obj);
+                                                        obj.attr("disabled","disabled");/*按钮倒计时*/
+                                                        var time = 60;
+                                                        var set=setInterval(function(){
+                                                            obj.val(--time+"(s)");
+                                                        }, 1000);/*等待时间*/
+                                                        setTimeout(function(){
+                                                            obj.attr("disabled",false).val("重新获取验证码");/*倒计时*/
+                                                            clearInterval(set);
+                                                        }, 60000);
+                                                    }
+
+                                                </script>
+                                            </div>
+                                            <label class="block clearfix" style="display: none">
+														<span class="block input-icon input-icon-right">
+															<input  type="password" class="form-control" placeholder="密码" />
+															<i class="ace-icon fa fa-lock" style="margin-top: 25px"></i>
 														</span>
                                             </label>
 
