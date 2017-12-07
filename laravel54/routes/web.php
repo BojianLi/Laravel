@@ -20,11 +20,18 @@ Route::get('/',function(){
      return view('login');
 });
 
+Route::get('test',function(){ return view('test');   }); //调试layout模板
+
+/**
+ * 登录/注册 群组
+ */
+Route::group(['prefix'=>'login'],function(){
+       Route::get('/',['as'=>'LoginTo','uses'=>'login\LoginController@LoginTo']);            //登录控制器
+       Route::get('register',['as'=>'Register','uses'=>'login\RegisterController@add']);     //注册控制器
+
+});
+
 Route::get('test1','StudentController@test1');
-
-Route::get('login',['as'=>'login','uses'=>'login\LoginController@LoginTo']);
-
-
 
 
 

@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8" />
-    <title>登录页面</title>
+    <title>小宝菜</title>
 
     <meta name="description" content="User login page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -54,11 +54,11 @@
                 <div class="login-container">
                     <div class="center">
                         <h1>
-                            <i class="ace-icon fa fa-leaf green"></i>
-                            <span class="red">Ace</span>
+                            <!-- <i class="ace-icon fa fa-leaf green"></i> -->
+                            <span class="red"><img width="53px" src="{{URL::asset('assets/css/img/c.png')}}"/>BSC</span>
                             <span class="white" id="id-text2">应用管理</span>
                         </h1>
-                        <h4 class="blue" id="id-company-text">&copy; 公司名称</h4>
+                        <h4 class="blue" id="id-company-text">&copy; 木子果蔬</h4>
                     </div>
 
                     <div class="space-6"></div>

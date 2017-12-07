@@ -3,10 +3,10 @@
 <html lang="en">
 
 <!--================================================================================
-    Item Name: Materialize - Material Design Admin Template
-    Version: 1.0
-    Author: GeeksLabs
-    
+	Item Name: Materialize - Material Design Admin Template
+	Version: 1.0
+	Author: GeeksLabs
+	
 ================================================================================ -->
 
 <head>
@@ -16,14 +16,12 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
     <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,">
-    <title>小宝菜</title>
+    <title>Materialize - Material Design Admin Template</title>
 
     <!-- Favicons-->
-    <!-- <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32"> -->
-    <link rel="icon" href="{{URL::asset('mater/images/favicon/favicon-32x32.png')}}" sizes="32x32">
+    <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <!-- Favicons-->
-    <!-- <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png"> -->
-    <link rel="apple-touch-icon-precomposed" href="{{URL::asset('mater/images/favicon/apple-touch-icon-152x152.png')}}">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
     <!-- For iPhone -->
     <meta name="msapplication-TileColor" content="#00bcd4">
     <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
@@ -31,16 +29,14 @@
 
 
     <!-- CORE CSS-->    
-    <!-- <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"> -->
-    <link href="{{URL::asset('mater/css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection">
 
-    <!-- <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"> -->
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('mater/css/style.css')}}" media="screen,projection">
 
     <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->    
-    <link href="{{URL::asset('mater/js/plugins/perfect-scrollbar/perfect-scrollbar.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="{{URL::asset('mater/js/plugins/jvectormap/jquery-jvectormap.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="{{URL::asset('mater/js/plugins/chartist-js/chartist.min.css')}}" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="js/plugins/jvectormap/jquery-jvectormap.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
 
 
 </head>
@@ -62,7 +58,6 @@
 
     <!-- START HEADER -->
     <header id="header" class="page-topbar">
-         @section('header')
         <!-- start header nav-->
         <div class="navbar-fixed">
             <nav class="cyan">
@@ -87,7 +82,6 @@
             </nav>
         </div>
         <!-- end header nav-->
-    @show
     </header>
     <!-- END HEADER -->
 
@@ -1023,32 +1017,32 @@
     ================================================ -->
     
     <!-- jQuery Library -->
-    <script src="{{URL::asset('mater/js/jquery.min.js')}}"></script> 
+    <script src="js/jquery.min.js"></script> 
     <!--materialize js-->
-    <script type="text/javascript" src="{{URL::asset('mater/js/materialize.min.js')}}"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <!--scrollbar-->
-    <script type="text/javascript" src="{{URL::asset('mater/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
+    <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
        
 
     <!-- chartist -->
-    <script type="text/javascript" src="{{URL::asset('mater/js/plugins/chartist-js/chartist.min.js')}}"></script>   
+    <script type="text/javascript" src="js/plugins/chartist-js/chartist.min.js"></script>   
 
     <!-- chartjs -->
-    <script type="text/javascript" src="{{URL::asset('mater/js/plugins/chartjs/chart.min.js')}}"></script>
-    <script type="text/javascript" src="{{URL::asset('mater/js/plugins/chartjs/chart-script.js')}}"></script>
+    <script type="text/javascript" src="js/plugins/chartjs/chart.min.js"></script>
+    <script type="text/javascript" src="js/plugins/chartjs/chart-script.js"></script>
 
     <!-- sparkline -->
-    <script type="text/javascript" src="{{URL::asset('mater/js/plugins/sparkline/jquery.sparkline.min.js')}}"></script>
-    <script type="text/javascript" src="{{URL::asset('mater/js/plugins/sparkline/sparkline-script.js')}}"></script>
+    <script type="text/javascript" src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="js/plugins/sparkline/sparkline-script.js"></script>
     
     <!--jvectormap-->
-    <script type="text/javascript" src="{{URL::asset('mater/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
-    <script type="text/javascript" src="{{URL::asset('mater/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
-    <script type="text/javascript" src="{{URL::asset('mater/js/plugins/jvectormap/vectormap-script.js')}}"></script>
+    <script type="text/javascript" src="js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script type="text/javascript" src="js/plugins/jvectormap/vectormap-script.js"></script>
     
     
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
-    <script type="text/javascript" src="{{URL::asset('mater/js/plugins.js')}}"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
     <!-- Toast Notification -->
     <script type="text/javascript">
     // Toast Notification
@@ -1068,4 +1062,3 @@
 </body>
 
 </html>
-
